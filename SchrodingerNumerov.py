@@ -67,8 +67,9 @@ for E in Energies:
         print(E1, E2, accuracy)
     print(Emid)
     Psi=Wavefunction(Emid)
-    plt.plot(X,Psi, 'k-', label="$\Psi, E=$" + str(Emid))
+    plt.plot(X,Psi, 'k-', label="$\Psi$, E=%.2f" % round(Emid,2))
     plt.legend()
     plt.grid()
+    plt.savefig("%.2fNumerovAlgorithm.png" % round(Emid,2),)
     plt.show()
 
